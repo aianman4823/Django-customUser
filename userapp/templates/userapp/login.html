@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="row">
+<!--        左側、ログインエリア-->
+        <div class="card col-md-6">
+            <div class="card-body">
+                <form action="{% url 'userapp:login' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    {% for field in form %}
+                    {{ field }}
+                    {{ field.errors }}
+                    <hr>
+                    {% endfor %}
+                    <button class="btn btn-success btn-lg btn-block" type="submit">ログイン</button>
+                    <input type="hidden" name="next" value="{{ next }}" >
+                </form>
+            </div>
+        </div>
+                <!--   左側、ログインエリア終わり-->
+
+
+                    <!--右側、会員登録エリア-->
+        <div class="card col-md-6">
+            <div class="card-body">
+                <a href="{% url 'userapp:user_create' %}" class="btn btn-success btn-lg btn-block">会員登録</a>
+                <a href="{% url 'userapp:password_reset' %}" class="btn btn-success btn-lg btn-block">パスワードを忘れた方</a>
+            </div>
+        </div>
+        <!-- 右側会委員登録エリア終わり -->
+    </div>
+{% endblock %}
