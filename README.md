@@ -5,7 +5,9 @@ Date: 2019/6/30
 
 # Description 詳細
 
-Django,PyMySQL,mysqlclient,pip,pytz,setuptools,sqlparseを用いている
+Django,PyMySQL,mysqlclient,pip,pytz,setuptools,sqlparseを用いている。
+スタイリングにはBootstrap v4を利用。
+一応レスポンシブ対応している。
 
 # create envs. 仮想環境の作り方
 
