@@ -7,4 +7,3 @@
 {{ protocol }}://{{ domain }}{% url 'userapp:user_create_complete' token %}
 
 
-ほにゃらら

@@ -2,4 +2,3 @@
 
 {{ protocol }}://{{ domain }}{% url 'userapp:email_change_complete' token %}
 
-ほにゃらら

@@ -215,7 +215,7 @@ class EmailChangeDone(LoginRequiredMixin,generic.TemplateView):
 
 class EmailChangeComplete(LoginRequiredMixin, generic.TemplateView):
     """リンクを踏んだ後に呼ばれるメアド変更ビュー"""
-    template_name = 'userapp/email_change_complete.html'
+    template_name = 'userapp/email_change_done.html'
     timeout_seconds = getattr(settings, 'ACTIVATION_TIMEOUT_SECONDS', 60*60*24)  # デフォルトでは1日以内
 
     def get(self, request, **kwargs):
